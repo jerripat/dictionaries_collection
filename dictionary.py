@@ -15,28 +15,29 @@ student = [
 def hello(name):
     print(f'Hello {name}!')
 
-def determine_name():
-    name = input('Enter your name: ')
-    return name
+#def determine_name():
+   # name = input('Enter your name: ')
+ #   return name
 
-for s in student:
-    for value in s.values():
-        stud_name = determine_name()
-        if value == str(stud_name):
-            hello(s['name'])
-            print('Major: Computer Science')
-            break
-        time.sleep(1)
-        print(value)
+# for s in student:
+#     for value in s.values():
+#         #stud_name = determine_name()
+#         #if value == str(stud_name):
+#             hello(s['name'])
+#             print('Major: Computer Science')
+#             break
+#         time.sleep(1)
+#         print(value)
 #______________________________________________________________________________________
 
 
-my_dictionary = {
-    'name': 'John',
-    'age': 20,
-    'grade': 'A',
-    'name': 'Jack',
-    'major': ['Computer Science', 'Math', 'Physics'],
-}
-md = my_dictionary
-print(md[0])
+md = student
+print(md[1])
+for s in md:
+    for value in s.values():
+        print(value)
+        if value == 'Jack':
+            hello(s['name'])
+            print(s['major'])
+            break
+        time.sleep(1)
